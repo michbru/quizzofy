@@ -1,0 +1,791 @@
+Initial brainstorming
+? Landing page with one upload button
+? Super simple
+? ADHD friendly colors
+? Typing animation
+? simulate uploading files
+? success message
+? get 5+ points
+? processing files
+? in the meanwhile, user plays tetris
+? Generate the all of the concept levels
+? You start at level 1, all other levels are locked
+? Start User level 1
+? Slide deck animation
+? Read concept description (2 sentences)
+? True false based on what you learned
+? also get points here
+? 1 minute timer
+? when you’re done, you get 10+ points
+? Level 2 unlocks (fancy animation)
+? Have a pomodoro timer
+? Sidebar with all the features
+? compressed with history, and expand when clicked upon
+? Blocker to distracting apps
+? For now, just make the website fullscreen
+? or use an extension
+? Comic sans or something that is friendly for legasthenics
+? Find out which colors are most friendly for studying and adhd
+? study mode
+? adhd friendly with colors and everything
+? distraction mode
+? complete opposite, mini games, candy crush?  
+? Store to buy new skins with these points
+? buy more ai generations
+? Add leaderboard
+? awhdiawdjdawd 
+Detailed requirements
+?? QUIZZOFY MVP - USER EXPERIENCE (BULLETPOINT FORMAT)
+
+1. LANDING PAGE
+? User arrives at completely clean page
+? One giant upload button in center: "Drop your notes here ??"
+? Headline above: "Turn boring PDFs into addictive games"
+? Subtext: "No signup. No bullshit. Just upload and play."
+? User drags PDF OR clicks button to browse
+? File uploads instantly with smooth animation
+? Screen fades to black
+? Text appears: "Analyzing your notes... Play while we work!"
+
+2. SNAKE GAME (Processing)
+? Dark game screen loads
+? Top banner: "?? Creating your learning path..."
+? Snake game starts with countdown: "3... 2... 1... GO!"
+? User plays classic snake (arrow keys or swipe)
+? Food items are book/brain icons ?? ??
+? Banner messages change every 15 seconds:
+? "Found 8 key concepts..."
+? "Creating bite-sized lessons..."
+? "Building your quizzes..."
+? Game lasts 60-75 seconds total
+? When done, score appears: "You scored 47!"
+? Score converts to bonus points with animation
+? "+47 points" flies to top corner
+? Screen brightens
+? Session card appears: "Your first session: ?? Cell Division"
+? Big "Start Learning" button
+
+3. SESSION MAP (First View)
+? Shows 8 session cards in vertical list
+? Session 1: Bright, unlocked, glowing, "Start here!"
+? Sessions 2-8: Grayed out, locked with padlock icons
+? Progress bar at bottom: "0/8 complete"
+? Points counter top right: "47 ?"
+? User clicks "Start Session 1"
+? Card flips with animation
+? Text appears: "SESSION 1: MITOSIS - Let's learn!"
+? Fades into first learning slide
+
+4. LEARNING PHASE
+Slide Structure:
+? Title at top: "WHAT IS MITOSIS?"
+? Visual in center (diagram/illustration)
+? 2-3 sentences of explanation below
+? "Slide 1 of 4" at bottom
+? Big "Continue ?" button with "+5 pts" label
+User Flow:
+? User reads slide (takes 15-30 seconds)
+? Clicks "Continue"
+? "+5" animation flies from button to points counter
+? Points update with satisfying sound
+? Next slide smoothly transitions in from right
+? Repeat for 4 total learning slides
+Example Progression:
+? Slide 1: "What is Mitosis?" - Basic definition
+? Slide 2: "The 4 Phases: PMAT" - Overview
+? Slide 3: "Prophase & Metaphase" - First two phases
+? Slide 4: "Anaphase & Telophase" - Last two phases
+After Last Slide:
+? Celebration screen: "NICE WORK! ??"
+? "You earned 20 learning points!"
+? "Now let's test what you know"
+? "Start Quiz" button appears
+
+5. QUIZ PHASE
+Question Types:
+Type 1: True/False
+? Statement displayed: "Mitosis creates two identical daughter cells."
+? Two big buttons: [TRUE] [FALSE]
+? Shows points: +10 for correct, -5 for wrong
+? Streak counter visible: "?? Streak: 0"
+Type 2: Multiple Choice
+? Question: "Which phase comes first in PMAT?"
+? Four options A, B, C, D as buttons
+? User clicks one
+Type 3: Fill in Blank
+? Question: "Mitosis creates ___ identical cells."
+? Input box for answer
+? Submit button
+Type 4: Interactive/Visual
+? "Label the diagram" - drag words to correct spots
+? "Click the correct part" - clickable diagram
+? "Put in order" - drag cards to sequence
+Answer Feedback - CORRECT:
+? Screen flashes green (0.3 seconds)
+? Large checkmark appears with animation
+? "+10" flies from center to points counter
+? Points update: 67 ? 77
+? Success sound plays
+? 1-2 sentence explanation reinforcing concept
+? If 3+ correct in row: "?? STREAK BONUS! +15 pts"
+? "Next Question" button (or auto-advances after 2 sec)
+Answer Feedback - WRONG:
+? Screen flashes red (0.3 seconds)
+? X mark on wrong answer, checkmark on correct answer
+? "-5" animation, points decrease
+? Gentle "wrong" sound
+? Explanation: Why wrong + correct answer shown
+? Streak resets to 0
+? User must click "Got it, Next" to continue
+Progress Tracking:
+? "Question 3 of 6" at top
+? Dots at bottom: ?????? (filled = answered, pulsing = current)
+
+6. SESSION COMPLETION
+If Score ? 60% (Passed):
+Celebration Sequence:
+? Screen goes dark (1 second pause)
+? "?? SESSION COMPLETE! ??" appears
+? Confetti explodes from all sides
+? "You scored 5/6 correct!" displays
+? Points counter appears: "? 85 POINTS ?"
+? Number counts up from 0 ? 85 with sound
+? Each milestone "ticks"
+? Final number sparkles
+Snowman Part Reveal:
+? New card slides up
+? Shows incomplete snowman (silhouette with some parts)
+? Text: "? YOU FOUND A SNOWMAN PART! ?"
+? New part (hat, scarf, etc.) falls from sky
+? Lands on snowman with "plop" sound
+? Part glows briefly
+? Progress dots fill: ?????
+? "Parts: 3 of 5 collected"
+? "Complete 2 more sessions to finish!"
+? "Continue Journey" button
+If Score < 60% (Failed):
+? "ALMOST THERE! ??"
+? Shows score: "3/6 correct"
+? "You need 4/6 to unlock next session"
+? Two options: [Review & Retry] [Skip for now]
+? No penalty message
+? "Your high score (3/6) is saved"
+? Can retry anytime with same questions (shuffled order)
+
+7. RETURN TO SESSION MAP
+Updated Map View:
+? Session 1: Now has green checkmark ?
+
+? Shows score: "5/6"
+? Shows points earned: "+85 pts"
+? Has [Play Again] and [Review] buttons
+? Grayed out/completed look
+? Session 2: NOW UNLOCKED!
+
+? Glowing border animation
+? "? JUST UNLOCKED!" badge
+? Pulsing slightly
+? "NEW! Tap to start" bouncing above it
+? [Start Session] button prominent
+? Shows time estimate: "?? ~5 minutes"
+? Sessions 3-8: Still locked ??
+
+? Dimmed appearance
+? Padlock icons
+? "Complete Session 2 to unlock" text
+? Progress bar updated: "???????? 1/8 complete"
+
+? Points counter updated: "152 ?"
+
+? Snowman progress top-right: "? 3/5"
+
+Unlock Animation:
+? Session 2 card shakes
+? Padlock shatters into pieces
+? Card brightens with glow effect
+? Mini confetti burst around card
+? Draws attention to newly unlocked content
+
+8. SNOWMAN COLLECTION
+Access:
+? Always visible top-right: "? 3/5"
+? User taps to open collection page
+Collection Page:
+Current Build Section:
+? Header: "??? CURRENTLY BUILDING:"
+? Large snowman display showing:
+? Parts collected so far (hat, head, scarf visible)
+? Missing parts shown as gray outlines (arms, base)
+? Progress: "Snowman #1 - 3/5 parts"
+? List of missing parts: "Missing: ?? Arms | ?? Base"
+? Motivation text: "Complete 2 more sessions to finish!"
+Completed Section:
+? Header: "? COMPLETED SNOWMEN:"
+? Grid of small snowman cards
+? Each shows: Completed snowman with all parts, Number (#1, #2, #3)
+? Tappable to view details/customize
+? Empty slots for future snowmen
+When Snowman Completed (5/5 parts):
+? Huge celebration screen
+? "?? SNOWMAN COMPLETE! ??"
+? Massive confetti burst
+? Completed snowman animates (builds itself piece by piece)
+? Final snowman does little celebration dance
+? "+100 BONUS POINTS!"
+? "Snowman #1 added to your collection!"
+? Options appear: [Customize] [Build Another] [View Collection]
+
+9. STORE
+Access:
+? Hamburger menu (?) in top-left
+? Click ? sidebar slides out
+? "?? Store" option with points balance
+? Tap to enter store
+Store Layout:
+Categories:
+1. Themes (changes entire app appearance)
+2. Snowman Cosmetics (hats, scarves, accessories)
+3. Power-Ups (gameplay boosts)
+Theme Examples:
+? Pixel Theme (250 pts)
+
+? Preview shows pixelated buttons/UI
+? Changes all visuals to 8-bit retro style
+? Changes font to pixel font
+? Changes sounds to retro bleeps
+? User clicks [Buy], confirms purchase
+? "Theme unlocked!" message
+? Can activate from settings
+? Neon Theme (300 pts)
+
+? Purple/pink gradient preview
+? 80s vaporwave aesthetic
+? Glowing effects everywhere
+? Dark Mode (150 pts)
+
+? Black background, neon accents
+? Easy on eyes
+Snowman Cosmetics Examples:
+? Wizard Hat (50 pts)
+? Crown (75 pts)
+? Sunglasses (60 pts)
+? Rainbow Scarf (40 pts)
+? Guitar prop (70 pts)
+? Each shows preview on snowman
+? Click to buy ? deducts points ? adds to inventory
+Power-Ups Examples:
+? Point Multiplier 1.1x (200 pts) - 10% more points per session
+? Streak Shield (150 pts) - One wrong answer doesn't break streak
+? Hint Tokens (100 pts) - Get 5 hints during quizzes
+? Shows what each does clearly
+? Purchase confirmation: "Are you sure? This costs 200 points"
+Purchase Flow:
+? User has 347 points
+? Clicks "Buy Pixel Theme (250 pts)"
+? Confirmation popup: "Spend 250 points?"
+? [Yes, Buy It] [Cancel]
+? If confirmed:
+? Points deduct with animation: 347 ? 97
+? "Unlocked! ??" message
+? Item added to inventory
+? Can apply immediately or later
+
+10. SIDEBAR MENU
+Collapsed State (Default):
+? Thin vertical bar on left side
+? Shows only icons:
+? ? (hamburger - opens/closes)
+? ?? (sessions - badge shows "3" completed)
+? ? (collection - badge shows "5" snowmen)
+? ?? (store)
+? ?? (settings)
+Expanded State:
+? User clicks ?
+? Sidebar slides out from left (smooth 300ms animation)
+? Shows full menu:
+Header:
+? "QUIZZOFY" logo
+? Points balance: "152 ?"
+Sessions Section:
+? "?? Your Sessions"
+? List of all sessions with status:
+? ? Mitosis (completed)
+? ? Meiosis (completed)
+? ? Cell Structure (completed)
+? ?? DNA Replication (locked)
+? ?? Protein Synthesis (locked)
+? Progress bar: "3/8 sessions ?????"
+Collection:
+? "? Collection"
+? "Snowmen: 5"
+? "Current parts: 12/25"
+? [View Gallery] button
+Store:
+? "?? Store"
+? "Points: 152 ?"
+? [Browse Items] button
+Settings:
+? "?? Settings"
+? Sound toggle: ON/OFF
+? Current theme display: "Default"
+? [Change Theme] button
+? [More Settings...] button
+Closing:
+? Click ? again to close
+? OR click anywhere outside sidebar
+? Sidebar slides back in (300ms)
+
+11. FOCUS MODE
+Auto-Fullscreen:
+? After Snake game ends, app requests fullscreen
+? Browser permission popup: "Quizzofy wants to go fullscreen"
+? If allowed:
+? App fills entire screen
+? Browser tabs/address bar hidden
+? Only Quizzofy visible
+? User fully immersed
+Exit Options:
+? Press ESC key ? exits fullscreen
+? "Take a Break" button always visible (small, bottom corner)
+? No guilt trips or blocking
+Leave Prevention (Gentle):
+? When user moves mouse toward top (to exit):
+? Small popup appears: "Taking a break? ??"
+? "You're 1 session away from completing your snowman!"
+? Two options:
+? [Keep Learning] - stays in app
+? [Yeah, I need a break] - lets them leave
+? OR alternative:
+? "Need a break? Play Snake again!"
+? "Your high score: 47 points"
+? [Play Snake] [Actually, I'm done]
+The Hook:
+? If they choose to play Snake:
+? Quick 60-second game
+? Earn more points
+? After game: "One more session? ??"
+? Easy to say yes because momentum
+? Loop: Study ? Break (Snake) ? Study ? Repeat
+No Blocking Philosophy:
+? Never forcibly prevent leaving
+? Just make staying more appealing than alternatives
+? Use positive reinforcement, not guilt/shame
+
+12. MOBILE EXPERIENCE
+Touch Optimizations:
+? All buttons minimum 48×48px (thumb-sized)
+? Swipe gestures:
+? Swipe left/right to move between learning slides
+? Swipe up to continue to next question
+? Haptic feedback:
+? Light vibration on correct answer
+? Different vibration pattern on wrong answer
+? Vibration on points earned
+Layout Adjustments:
+? Portrait mode default (vertical scrolling)
+? Landscape optional for games
+? Text sizes larger on mobile
+? Buttons stack vertically instead of side-by-side
+? Sidebar becomes fullscreen overlay when opened
+PWA Features (Progressive Web App):
+? Prompt appears: "Add Quizzofy to your home screen?"
+? Once added:
+? App icon on home screen like native app
+? Opens without browser UI
+? Works offline (cached sessions)
+? Feels like real app, not website
+Mobile-Specific Games:
+? Snake: On-screen D-pad OR swipe controls
+? Clear touch targets for directional control
+? Responsive to gestures
+Notifications (if PWA installed):
+? "You've got a 3-day streak! ?? Don't break it!"
+? "Session 4 is waiting for you!"
+? "You're one session away from completing Snowman #2!"
+? User can enable/disable in settings
+
+13. ONBOARDING (First-Time User)
+The First 6 Minutes:
+0:00-0:05 - Arrival
+? Land on clean upload page
+? Immediately clear what to do
+? Upload PDF (no thinking required)
+0:05-0:10 - Upload
+? File uploads instantly
+? Smooth transition to game
+0:10-1:30 - Snake Game
+? Play Snake while "processing"
+? Earn 47 bonus points
+? Engaging, not boring wait
+1:30-1:45 - Transition
+? Points convert with celebration
+? Session 1 revealed
+? Clear next step: "Start Learning"
+1:45-2:00 - First Tooltip
+? Small bubble appears: "?? Click Continue to learn! +5 pts each time"
+? Auto-dismisses after 5 seconds
+? Only shown once ever
+2:00-4:00 - Learning
+? Read 4 concept slides
+? Click Continue each time
+? Earn +5 points × 4 = +20 points
+? Build understanding of topic
+4:00-6:00 - First Quiz
+? Answer 6 questions
+? Get immediate feedback (correct/wrong)
+? Second tooltip after first question: "Nice! Correct = +10 pts, wrong = -5 pts"
+? Experience streak bonuses
+? Complete quiz
+6:00-6:30 - HUGE Celebration
+? "SESSION COMPLETE! ??"
+? Confetti explosion
+? Points counted up dramatically
+? Feel accomplished
+6:30-6:45 - Snowman Reveal
+? "You earned a snowman part!"
+? See first piece appear
+? Understand collection mechanic
+? "4 more parts to complete it!"
+6:45+ - Decision Point
+? "Keep going? Session 2 is unlocked!"
+? If they've made it this far (6 minutes), they're hooked
+? High likelihood they do another session
+Critical Success Factors:
+? No account creation barrier
+? Instant gratification (Snake game, points)
+? Clear progress (6 minutes to first major win)
+? Dopamine hits throughout (points, streaks, parts)
+? Easy to understand (no complex tutorials)
+
+14. CONTENT STRUCTURE (Behind Scenes)
+What User Uploaded:
+? Biology textbook PDF, Chapter 3: Cell Division
+What App Creates (Simulated for MVP):
+? Analyzes and breaks into 8 sessions:
+1. Mitosis Overview
+2. Meiosis Overview
+3. DNA Structure
+4. Cell Cycle
+5. Chromosomes
+6. Cell Replication
+7. Mutations
+8. Cell Death
+Each Session Contains:
+? 4 learning slides (2-3 sentences each)
+? 6-8 quiz questions (mixed types)
+? 1 visual per slide (diagram/illustration)
+? Estimated 5-7 minutes to complete
+Question Difficulty:
+? Starts easy (basic recall)
+? Progressively harder (application/analysis)
+? Balanced so average score is 60-75%
+? Not too easy (boring) or too hard (frustrating)
+For MVP (No Real AI):
+? Pre-written content for 5 topics:
+? Biology (Cell Division) - 8 sessions
+? History (World War 2) - 8 sessions
+? Math (Algebra) - 8 sessions
+? Chemistry (Elements) - 8 sessions
+? Physics (Motion) - 8 sessions
+? User upload triggers random topic selection
+? "Processing" is fake (just playing Snake)
+? Feels real to user
+
+15. POINTS ECONOMY
+How Users Earn Points:
+? Snake game score: 1:1 (score 47 = 47 points)
+? Clicking "Continue" on learning slides: +5 each
+? Correct answer: +10
+? Wrong answer: -5
+? Streak bonus (3 correct in row): +15
+? Perfect session (no wrong answers): +50 bonus
+? Session completion: +25
+? Completing a snowman: +100
+Typical Session Breakdown:
+? Learning phase: 4 slides × 5 = 20 points
+? Quiz phase: 5 correct × 10 = 50 points
+? 1 wrong × -5 = -5 points
+? One streak bonus: +15 points
+? Completion bonus: +25 points
+? Total: ~105 points per session
+What Points Buy:
+? Themes: 150-300 points
+? Cosmetics: 30-100 points each
+? Power-ups: 100-300 points
+Balance:
+? Complete 3 sessions = ~300 points
+? Enough to buy one theme
+? Enough to customize snowman significantly
+? Creates "I'm close to affording X" motivation
+
+16. ENGAGEMENT LOOPS
+Micro-Loop (Every 30 seconds):
+? Read slide ? Click ? +5 points ? Dopamine hit ? Next slide
+? Answer question ? Feedback ? Points ? Next question
+? Constant small rewards keep user engaged
+Meso-Loop (Every 5-7 minutes):
+? Complete session ? Huge celebration ? Snowman part ? Unlock next session
+? "Just one more session" feeling
+? Similar to "just one more episode" on Netflix
+Macro-Loop (Every ~40 minutes):
+? Complete snowman (5 sessions) ? Major celebration ? Customize it
+? Start building next snowman
+? Sense of collection/achievement
+Meta-Loop (Days/Weeks):
+? Build snowman army
+? Unlock all themes
+? Complete all topics
+? Become "Quizzofy master"
+
+17. SUCCESS SCENARIOS
+Best Case User Journey:
+? Uploads notes at 8pm
+? Plays Snake, enjoys it
+? Completes Session 1, feels good
+? "One more session..." completes Session 2
+? 30 minutes later: completed 4 sessions
+? Earned 2 snowman parts
+? Bought pixel theme with points
+? Excited to continue tomorrow
+? Actually learned the material
+Realistic User Journey:
+? Uploads notes
+? Plays Snake
+? Completes Session 1
+? Checks phone (distracted)
+? Remembers snowman is almost done
+? Comes back
+? Completes Session 2
+? "Okay, one more for the snowman..."
+? Completes Session 3 - snowman done!
+? Customizes snowman
+? Closes app feeling accomplished
+? Returns next day
+Edge Case (Struggling Student):
+? Uploads notes
+? Snake game: scores low, but still fun
+? Starts Session 1
+? Gets 3/6 questions wrong (50% score)
+? Sees "Almost there! Try again?"
+? Retries immediately
+? Gets 5/6 (83%)
+? "I got this!" confidence boost
+? Continues to Session 2
+
+18. KEY DIFFERENTIATORS
+vs. Traditional Study Apps:
+? Them: Boring flashcards
+? Us: Gamified with points, snowmen, themes
+vs. Competitors (Mindgrasp, Quizgecko):
+? Them: Login required, boring loading screens
+? Us: Instant play, Snake game while processing
+vs. YouTube/TikTok (What Students Usually Do):
+? Them: Endless scroll, no progress
+? Us: Distraction IS the app, but productive
+vs. Games (Where Students Escape To):
+? Them: Fun but no value
+? Us: Fun AND you actually learn
+The Hook:
+? "What if procrastination was productive?"
+? "What if studying felt like gaming?"
+? "What if you could be distracted... by learning?"
+
+19. MVP SCOPE (What's Included)
+Included:
+? Landing page with upload
+? Snake game during processing
+? 5 topics × 8 sessions each = 40 total sessions
+? Full learning + quiz system
+? Points system with animations
+? Snowman collection (build 8 snowmen total)
+? Store with 5 themes, 15 cosmetics, 5 power-ups
+? Sidebar navigation
+? Mobile responsive
+? Sound effects
+? Confetti celebrations
+? Progress tracking
+? Session retry
+? Fullscreen focus mode
+Not Included (Post-MVP):
+? Real AI generation (using pre-made content)
+? User accounts/cloud save (localStorage only)
+? Leaderboards
+? Multiplayer
+? More games beyond Snake
+? Teacher dashboard
+? Analytics beyond basic tracking
+? Spaced repetition
+? Multiple languages
+MVP Goal:
+? Prove the concept works
+? Get users hooked
+? Validate engagement metrics
+? Gather feedback
+? Launch in 3 weeks
+
+20. THE "WOW" MOMENTS (Must Nail These)
+Moment 1 (5 seconds in):
+? "Oh, I just upload? That's it? Easy."
+? Removes all friction
+Moment 2 (20 seconds in):
+? "Wait, I'm playing SNAKE while it loads?!"
+? Delights, unexpected
+Moment 3 (5 minutes in):
+? "I'm earning points just by clicking?!"
+? Instant gratification
+Moment 4 (7 minutes in):
+? Session complete ? HUGE confetti celebration
+? "Whoa, that felt GOOD"
+Moment 5 (8 minutes in):
+? "I got a snowman HAT?! I need more parts!"
+? Collection mechanic hooks them
+Moment 6 (15 minutes in):
+? Unlocks Session 2 with animation
+? "Ooh, what's next?!" - curiosity triggered
+Moment 7 (30 minutes in):
+? Completes snowman ? massive celebration
+? "I BUILT A SNOWMAN BY STUDYING!"
+? Shares screenshot with friends
+Moment 8 (Next day):
+? Returns to app
+? Sees progress saved
+? "Okay, let's finish this..."
+? Retention achieved
+
+END OF MVP REQUIREMENTS
+
+Division of work
+?? 3-PERSON TEAM DIVISION FOR QUIZZOFY MVP
+
+PERSON 1: "THE ENTRY & HOOKS SPECIALIST"
+~35% of work - Focus: First impressions & engagement mechanics
+Responsibilities:
+1. Landing Page
+? Clean upload button page
+? Upload interaction and file handling simulation
+? Smooth transitions to Snake game
+2. Snake Game
+? Implement or integrate Snake game (use library)
+? Game controls (keyboard + mobile swipe)
+? Score tracking and conversion to points
+? Processing messages that change during gameplay
+? Transition animations from game to sessions
+3. Points System (Core Infrastructure)
+? Points counter (always visible top-right)
+? All point animations (+5, +10, -5, etc.)
+? Points flying from actions to counter
+? Sound effects for point earning
+? Points persistence (localStorage)
+4. Sidebar Navigation
+? Collapsible menu (hamburger icon)
+? Expand/collapse animations
+? Menu content layout
+? Navigation between pages
+? Mobile overlay version
+5. Focus Mode/Fullscreen
+? Fullscreen request logic
+? Exit prevention gentle prompts
+? "Take a break" overlays
+? "Play Snake again?" re-engagement flow
+
+PERSON 2: "THE LEARNING ENGINE"
+~40% of work - Focus: Core educational experience
+Responsibilities:
+1. Session Map/Overview
+? List of all 8 sessions
+? Locked/unlocked states
+? Session cards with visual states (completed, unlocked, locked)
+? Progress bar
+? Unlock animations (padlock breaking, card glowing)
+2. Learning Phase (Slides)
+? Slide layout and design
+? Slide progression (continue button)
+? 4 slides per session structure
+? Slide transition animations
+? Progress indicator (Slide 1 of 4)
+3. Quiz Phase (All Question Types)
+? True/False questions
+? Multiple choice questions
+? Fill-in-the-blank questions
+? Interactive questions (drag, click, sequence)
+? Question progression
+? Progress dots (??????)
+4. Answer Feedback System
+? Correct answer flow (green flash, checkmark, +10)
+? Wrong answer flow (red flash, X mark, -5, explanation)
+? Streak counter and streak bonuses
+? Answer explanations display
+5. Session Completion
+? Completion celebration screen
+? Score calculation and display
+? Pass/fail logic (60% threshold)
+? Retry functionality
+? Points tally with count-up animation
+6. Content Management
+? Pre-written content for 5 topics
+? 40 sessions total (5 topics × 8 sessions)
+? Question bank for each session
+? Visuals for learning slides
+? Content loading logic
+
+PERSON 3: "THE REWARDS & POLISH MASTER"
+~25% of work - Focus: Gamification & design system
+Responsibilities:
+1. Design System
+? Color palette (ADHD-friendly defaults)
+? Typography system (Comic Neue, readable fonts)
+? Button styles and hover states
+? Card layouts
+? Consistent spacing system
+? Animation timing standards
+2. Snowman Collection System
+? Snowman building progression (5 parts)
+? Parts reveal animations after sessions
+? Collection page layout
+? "Currently building" display
+? Completed snowmen gallery
+? Part tracking (3/5 display)
+3. Snowman Completion Celebration
+? Massive celebration when 5/5 parts collected
+? Snowman building animation (parts assembling)
+? Bonus points award (+100)
+? Completed snowman added to collection
+4. Store
+? Store page layout
+? Theme previews (Pixel, Neon, Dark Mode, etc.)
+? Cosmetics display (hats, scarves, accessories)
+? Power-ups section
+? Purchase flow
+? Points deduction
+? "Unlocked!" confirmations
+? Theme switching functionality
+5. Theme System
+? Default theme
+? Pixel theme (8-bit aesthetic)
+? Neon theme (vaporwave)
+? Dark mode theme
+? Theme application across entire app
+? Font changes per theme
+? Color scheme switching
+6. All Celebration Animations
+? Confetti effects (multiple types)
+? Sparkle effects
+? Screen flashes (green/red)
+? Number count-up animations
+? Part collection animations
+? Unlock animations
+7. Sound Effects
+? Point earning sounds
+? Correct/wrong answer sounds
+? Celebration sounds
+? Snake game sounds
+? Button click sounds
+? Sound toggle functionality
+8. Mobile Responsiveness
+? All layouts adapt to mobile
+? Touch targets (48px minimum)
+? Swipe gestures
+? Haptic feedback
+? Portrait/landscape handling
+
+

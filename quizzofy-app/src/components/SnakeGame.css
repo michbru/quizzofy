@@ -1,0 +1,170 @@
+.snake-game {
+  min-height: 100vh;
+  background: #1a202c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+.snake-header {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.snake-message {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #48bb78;
+  animation: pulse 2s infinite;
+}
+
+.snake-timer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f56565;
+}
+
+.snake-countdown {
+  text-align: center;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.countdown-number {
+  font-size: 10rem;
+  font-weight: 700;
+  color: #48bb78;
+  animation: pulse 0.8s ease-in-out;
+}
+
+.countdown-text {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #cbd5e0;
+}
+
+.snake-container {
+  position: relative;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.snake-score {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #48bb78;
+}
+
+.snake-grid {
+  position: relative;
+  background: #2d3748;
+  border: 4px solid #4a5568;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(72, 187, 120, 0.3);
+}
+
+.snake-segment {
+  position: absolute;
+  background: #48bb78;
+  border-radius: 3px;
+  transition: all 0.05s linear;
+}
+
+.snake-head {
+  background: #38a169;
+  box-shadow: 0 0 10px #48bb78;
+}
+
+.snake-food {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  animation: pulse 1s infinite;
+}
+
+.snake-controls {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.snake-instructions {
+  font-size: 1.2rem;
+  color: #cbd5e0;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.snake-game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 300px;
+  border: 3px solid #48bb78;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.game-over-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #48bb78;
+  margin-bottom: 20px;
+}
+
+.game-over-score {
+  font-size: 1.8rem;
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.game-over-points {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 20px;
+  animation: pulse 1s infinite;
+}
+
+.game-over-loading {
+  font-size: 1.2rem;
+  color: #cbd5e0;
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .snake-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .snake-message {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .countdown-number {
+    font-size: 6rem;
+  }
+
+  .snake-grid {
+    transform: scale(0.8);
+  }
+}

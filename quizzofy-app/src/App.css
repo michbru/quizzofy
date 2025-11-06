@@ -1,0 +1,199 @@
+/* Global Styles and Themes */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Neue', 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Default Theme - ADHD Friendly Colors */
+.theme-default {
+  --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --accent-1: #f56565;
+  --accent-2: #48bb78;
+  --accent-3: #4299e1;
+  --accent-4: #ed8936;
+  --accent-5: #9f7aea;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --border-radius: 20px;
+}
+
+/* Pixel Theme */
+.theme-pixel {
+  --bg-primary: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --bg-secondary: #2a2a2a;
+  --bg-card: #1a1a1a;
+  --text-primary: #00ff00;
+  --text-secondary: #00cc00;
+  --accent-1: #ff00ff;
+  --accent-2: #00ffff;
+  --accent-3: #ffff00;
+  --accent-4: #ff6600;
+  --accent-5: #00ff00;
+  --shadow: 0 4px 0 rgba(0, 255, 0, 0.3);
+  --border-radius: 0px;
+  font-family: 'Courier New', monospace;
+  image-rendering: pixelated;
+}
+
+/* Neon Theme */
+.theme-neon {
+  --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  --bg-secondary: #0f3460;
+  --bg-card: #16213e;
+  --text-primary: #ff00ff;
+  --text-secondary: #00ffff;
+  --accent-1: #ff00ff;
+  --accent-2: #00ffff;
+  --accent-3: #ff6ec7;
+  --accent-4: #7afcff;
+  --accent-5: #ffd700;
+  --shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  --border-radius: 15px;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bg-primary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  --bg-secondary: #2d3748;
+  --bg-card: #1a202c;
+  --text-primary: #f7fafc;
+  --text-secondary: #cbd5e0;
+  --accent-1: #fc8181;
+  --accent-2: #68d391;
+  --accent-3: #63b3ed;
+  --accent-4: #f6ad55;
+  --accent-5: #b794f4;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --border-radius: 20px;
+}
+
+/* Nature Theme */
+.theme-nature {
+  --bg-primary: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  --bg-secondary: #f0fff4;
+  --bg-card: #ffffff;
+  --text-primary: #22543d;
+  --text-secondary: #2f855a;
+  --accent-1: #f56565;
+  --accent-2: #48bb78;
+  --accent-3: #4299e1;
+  --accent-4: #ed8936;
+  --accent-5: #9f7aea;
+  --shadow: 0 10px 30px rgba(72, 187, 120, 0.2);
+  --border-radius: 20px;
+}
+
+/* Smooth animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--accent-3), 0 0 10px var(--accent-3);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-3), 0 0 30px var(--accent-3);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Utility classes */
+.fade-in {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.slide-in {
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-5);
+}

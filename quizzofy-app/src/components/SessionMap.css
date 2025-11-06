@@ -1,0 +1,239 @@
+.session-map {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 80px 20px 40px;
+}
+
+.session-map-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: white;
+}
+
+.session-map-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.session-map-progress {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #48bb78, #38a169);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(72, 187, 120, 0.5);
+}
+
+.progress-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.snowman-mini {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  animation: bounce 2s infinite;
+}
+
+.snowman-mini-icon {
+  font-size: 1.5rem;
+}
+
+.snowman-mini-text {
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.sessions-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.session-card {
+  background: var(--bg-card, white);
+  border-radius: var(--border-radius, 20px);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  animation: slideInUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.session-card:nth-child(1) { animation-delay: 0.1s; }
+.session-card:nth-child(2) { animation-delay: 0.2s; }
+.session-card:nth-child(3) { animation-delay: 0.3s; }
+.session-card:nth-child(4) { animation-delay: 0.4s; }
+.session-card:nth-child(5) { animation-delay: 0.5s; }
+
+.session-card.unlocked {
+  border: 3px solid #48bb78;
+}
+
+.session-card.just-unlocked {
+  animation: glow 2s infinite;
+}
+
+.session-card.completed {
+  opacity: 0.8;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.session-card.locked {
+  opacity: 0.6;
+  background: #f7fafc;
+}
+
+.session-number {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.session-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.session-locked {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.lock-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.lock-text {
+  font-size: 1.1rem;
+}
+
+.session-unlocked {
+  text-align: center;
+}
+
+.unlock-badge {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #744210;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+
+.session-start-btn {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.session-start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(72, 187, 120, 0.6);
+}
+
+.session-time {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.session-completed {
+  text-align: center;
+}
+
+.completed-badge {
+  background: #48bb78;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.session-score,
+.session-points {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 5px 0;
+}
+
+.session-actions {
+  margin-top: 15px;
+}
+
+.session-retry-btn {
+  background: var(--accent-3);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.session-retry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+@media (max-width: 768px) {
+  .session-map-header h1 {
+    font-size: 2rem;
+  }
+
+  .session-card {
+    padding: 20px;
+  }
+
+  .session-title {
+    font-size: 1.4rem;
+  }
+
+  .snowman-mini {
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+  }
+}

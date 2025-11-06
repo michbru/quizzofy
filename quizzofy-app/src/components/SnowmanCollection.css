@@ -1,0 +1,224 @@
+.snowman-collection {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 80px 20px 40px;
+}
+
+.collection-header {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: white;
+  color: #667eea;
+}
+
+.collection-header h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.collection-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.current-build-section,
+.completed-section,
+.cosmetics-section {
+  background: var(--bg-card, white);
+  border-radius: var(--border-radius, 20px);
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+  animation: slideInUp 0.5s ease-out;
+}
+
+.current-build-section h2,
+.completed-section h2,
+.cosmetics-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.current-snowman {
+  text-align: center;
+}
+
+.snowman-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.snowman-part {
+  font-size: 4rem;
+  transition: all 0.3s ease;
+}
+
+.snowman-part.collected {
+  animation: bounce 0.5s ease-out;
+}
+
+.snowman-part.missing {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.snowman-progress {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 20px 0;
+}
+
+.missing-parts {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f7fafc;
+  border-radius: 15px;
+}
+
+.missing-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.missing-part {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+
+.motivation-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-3);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.complete-message {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #48bb78;
+  margin-top: 20px;
+  padding: 20px;
+  background: #c6f6d5;
+  border-radius: 15px;
+  animation: pulse 1.5s infinite;
+}
+
+.completed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.completed-snowman-card {
+  background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+  border: 3px solid #4299e1;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.completed-snowman-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.4);
+}
+
+.completed-snowman-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.completed-snowman-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c5282;
+}
+
+.no-completed {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  padding: 40px;
+  background: #f7fafc;
+  border-radius: 15px;
+}
+
+.cosmetics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.cosmetic-item {
+  background: linear-gradient(135deg, #fef5e7, #ffeaa7);
+  border: 2px solid #ed8936;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.cosmetic-item:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .collection-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .collection-header h1 {
+    font-size: 2rem;
+  }
+
+  .current-build-section,
+  .completed-section,
+  .cosmetics-section {
+    padding: 25px 20px;
+  }
+
+  .snowman-part {
+    font-size: 3rem;
+  }
+
+  .completed-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .cosmetics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

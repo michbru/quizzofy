@@ -1,0 +1,39 @@
+.points-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #744210;
+  animation: float 3s ease-in-out infinite;
+}
+
+.points-amount {
+  font-size: 1.8rem;
+}
+
+.points-sparkle {
+  font-size: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+  .points-counter {
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  .points-amount {
+    font-size: 1.4rem;
+  }
+}
