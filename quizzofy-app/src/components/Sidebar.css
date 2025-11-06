@@ -12,6 +12,8 @@
 
 .sidebar.closed {
   width: 60px;
+  background: transparent;
+  box-shadow: none;
 }
 
 .sidebar.open {
@@ -25,6 +27,12 @@
   top: 0;
   background: var(--bg-card, white);
   z-index: 10;
+}
+
+.sidebar.closed .sidebar-header {
+  background: transparent;
+  border-bottom: none;
+  padding: 20px 10px;
 }
 
 .sidebar-toggle {

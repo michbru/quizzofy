@@ -116,6 +116,19 @@
 .item-preview {
   font-size: 4rem;
   margin-bottom: 20px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-preview-image,
+.cosmetic-preview-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .item-name {

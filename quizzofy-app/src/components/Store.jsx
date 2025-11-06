@@ -1,19 +1,28 @@
 import { useState } from 'react';
 import './Store.css';
+import themePixel from '../assets/images/theme-pixel.png';
+import themeNeon from '../assets/images/theme-neon.png';
+import themeDark from '../assets/images/theme-dark.png';
+import themeNature from '../assets/images/theme-nature.png';
+import cosmeticWizardHat from '../assets/images/cosmetic-wizard-hat.png';
+import cosmeticCrown from '../assets/images/cosmetic-crown.png';
+import cosmeticSunglasses from '../assets/images/cosmetic-sunglasses.png';
+import cosmeticRainbowScarf from '../assets/images/cosmetic-rainbow-scarf.png';
+import cosmeticGuitar from '../assets/images/cosmetic-guitar.png';
 
 const STORE_ITEMS = {
   themes: [
-    { id: 'pixel', name: 'Pixel Theme', cost: 250, description: '8-bit retro aesthetic', preview: '🎮' },
-    { id: 'neon', name: 'Neon Theme', cost: 300, description: '80s vaporwave vibes', preview: '💜' },
-    { id: 'dark', name: 'Dark Mode', cost: 150, description: 'Easy on the eyes', preview: '🌙' },
-    { id: 'nature', name: 'Nature Theme', cost: 200, description: 'Calm and natural', preview: '🌿' }
+    { id: 'pixel', name: 'Pixel Theme', cost: 250, description: '8-bit retro aesthetic', preview: '🎮', image: themePixel },
+    { id: 'neon', name: 'Neon Theme', cost: 300, description: '80s vaporwave vibes', preview: '💜', image: themeNeon },
+    { id: 'dark', name: 'Dark Mode', cost: 150, description: 'Easy on the eyes', preview: '🌙', image: themeDark },
+    { id: 'nature', name: 'Nature Theme', cost: 200, description: 'Calm and natural', preview: '🌿', image: themeNature }
   ],
   cosmetics: [
-    { id: 'wizard-hat', name: 'Wizard Hat', cost: 50, type: 'cosmetic', icon: '🧙' },
-    { id: 'crown', name: 'Crown', cost: 75, type: 'cosmetic', icon: '👑' },
-    { id: 'sunglasses', name: 'Sunglasses', cost: 60, type: 'cosmetic', icon: '😎' },
-    { id: 'rainbow-scarf', name: 'Rainbow Scarf', cost: 40, type: 'cosmetic', icon: '🌈' },
-    { id: 'guitar', name: 'Guitar', cost: 70, type: 'cosmetic', icon: '🎸' }
+    { id: 'wizard-hat', name: 'Wizard Hat', cost: 50, type: 'cosmetic', icon: '🧙', image: cosmeticWizardHat },
+    { id: 'crown', name: 'Crown', cost: 75, type: 'cosmetic', icon: '👑', image: cosmeticCrown },
+    { id: 'sunglasses', name: 'Sunglasses', cost: 60, type: 'cosmetic', icon: '😎', image: cosmeticSunglasses },
+    { id: 'rainbow-scarf', name: 'Rainbow Scarf', cost: 40, type: 'cosmetic', icon: '🌈', image: cosmeticRainbowScarf },
+    { id: 'guitar', name: 'Guitar', cost: 70, type: 'cosmetic', icon: '🎸', image: cosmeticGuitar }
   ],
   powerups: [
     { id: 'multiplier', name: 'Point Multiplier 1.1x', cost: 200, description: '10% more points per session', icon: '⚡' },
@@ -95,7 +104,13 @@ function Store({ points, unlockedThemes, unlockedCosmetics, currentTheme, onPurc
 
               return (
                 <div key={theme.id} className={`store-item ${unlocked ? 'unlocked' : ''}`}>
-                  <div className="item-preview">{theme.preview}</div>
+                  <div className="item-preview">
+                    {theme.image ? (
+                      <img src={theme.image} alt={theme.name} className="theme-preview-image" />
+                    ) : (
+                      <span>{theme.preview}</span>
+                    )}
+                  </div>
                   <div className="item-name">{theme.name}</div>
                   <div className="item-description">{theme.description}</div>
                   <div className="item-cost">{theme.cost} ✨</div>
@@ -131,7 +146,13 @@ function Store({ points, unlockedThemes, unlockedCosmetics, currentTheme, onPurc
 
               return (
                 <div key={cosmetic.id} className={`store-item ${unlocked ? 'unlocked' : ''}`}>
-                  <div className="item-preview">{cosmetic.icon}</div>
+                  <div className="item-preview">
+                    {cosmetic.image ? (
+                      <img src={cosmetic.image} alt={cosmetic.name} className="cosmetic-preview-image" />
+                    ) : (
+                      <span>{cosmetic.icon}</span>
+                    )}
+                  </div>
                   <div className="item-name">{cosmetic.name}</div>
                   <div className="item-cost">{cosmetic.cost} ✨</div>
                   {unlocked ? (

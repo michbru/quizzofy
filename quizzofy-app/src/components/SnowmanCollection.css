@@ -76,6 +76,15 @@
 .snowman-part {
   font-size: 4rem;
   transition: all 0.3s ease;
+  max-width: 200px;
+}
+
+.snowman-part-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
 .snowman-part.collected {
@@ -83,6 +92,11 @@
 }
 
 .snowman-part.missing {
+  opacity: 0.3;
+}
+
+.snowman-part-placeholder {
+  font-size: 4rem;
   opacity: 0.3;
   filter: grayscale(100%);
 }

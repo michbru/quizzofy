@@ -1,12 +1,17 @@
 import './SnowmanCollection.css';
+import snowmanBase from '../assets/images/snowman-base.png';
+import snowmanMiddle from '../assets/images/snowman-middle.png';
+import snowmanHead from '../assets/images/snowman-head.png';
+import snowmanHat from '../assets/images/snowman-hat.png';
+import snowmanScarf from '../assets/images/snowman-scarf.png';
 
 function SnowmanCollection({ currentParts, completedSnowmen, unlockedCosmetics, onBack }) {
   const SNOWMAN_PARTS = [
-    { id: 1, name: 'Base', icon: '⚫' },
-    { id: 2, name: 'Middle', icon: '⚪' },
-    { id: 3, name: 'Head', icon: '⚪' },
-    { id: 4, name: 'Hat', icon: '🎩' },
-    { id: 5, name: 'Scarf', icon: '🧣' }
+    { id: 1, name: 'Base', icon: '⚫', image: snowmanBase },
+    { id: 2, name: 'Middle', icon: '⚪', image: snowmanMiddle },
+    { id: 3, name: 'Head', icon: '⚪', image: snowmanHead },
+    { id: 4, name: 'Hat', icon: '🎩', image: snowmanHat },
+    { id: 5, name: 'Scarf', icon: '🧣', image: snowmanScarf }
   ];
 
   return (
@@ -28,7 +33,11 @@ function SnowmanCollection({ currentParts, completedSnowmen, unlockedCosmetics, 
                   key={part.id}
                   className={`snowman-part ${part.id <= currentParts ? 'collected' : 'missing'}`}
                 >
-                  {part.id <= currentParts ? part.icon : '○'}
+                  {part.id <= currentParts ? (
+                    <img src={part.image} alt={part.name} className="snowman-part-image" />
+                  ) : (
+                    <div className="snowman-part-placeholder">○</div>
+                  )}
                 </div>
               ))}
             </div>
