@@ -6,7 +6,7 @@ const CELL_SIZE = 20;
 const INITIAL_SNAKE = [{ x: 10, y: 10 }];
 const INITIAL_DIRECTION = { x: 1, y: 0 };
 const GAME_SPEED = 150;
-const GAME_DURATION = 65000; // 65 seconds
+const GAME_DURATION = 20000; // 20 seconds
 
 const MESSAGES = [
   "🔍 Analyzing your notes...",
